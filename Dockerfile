@@ -12,5 +12,5 @@ RUN wget https://github.com/xtaci/kcptun/releases/download/v20161118/kcptun-linu
     mv client_linux_amd64 client 
 COPY client.json /root/client.json
 EXPOSE 12948
-CMD gosu client -c /root/client.json
+CMD /go/client -c /root/client.json
 
