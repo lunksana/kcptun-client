@@ -13,5 +13,5 @@ VOLUME /root
 RUN go get github.com/xtaci/kcptun/client
 COPY client.json /root/client.json
 EXPOSE 12948
-CMD /go/bin/client -c /root/client.json
+#CMD /go/bin/client -c /root/client.json
 
