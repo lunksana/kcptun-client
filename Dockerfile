@@ -16,5 +16,5 @@ ADD start.sh /
 RUN chmod +x /start.sh
 EXPOSE 12948
 CMD set -xe &&\  
-    ./start.sh
+    /start.sh
 
