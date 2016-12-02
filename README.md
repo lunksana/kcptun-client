@@ -10,11 +10,13 @@ kcptun执行程序抓取于[xtaci/kcptun](https://github.com/xtaci/kcptun)
 1. 抓取容器：docker pull lunksana/kcptun-client
 2. 挂载容器/root目录至宿主机任意目录，请确保该目录有写入权限
 3. 映射容器端口12948至宿主机任意端口
+
 ## 2.运行命令
 docker run --name mykcptun-client -v /path/json:/root -p 1083:12948 -d lunksana/kcptun-client:latest
 ## 3.修改配置文件
 容器首次运行后会自动在挂载的目录下生成一个client.json文件，请根据kcptun服务端的配置自行调整（请不要修改监听端口12948）
 ## 4.变量说明
+```
 |      变量名      |      默认值      |      说明      |
 |-----------------|------------------|---------------|
 |localaddr        |:12948            |监听端口        |
@@ -38,6 +40,7 @@ docker run --name mykcptun-client -v /path/json:/root -p 1083:12948 -d lunksana/
 |nc               |1                 |                |
 |sockbuf          |4194304           |                |
 |keepalive        |10                |                |
+```
 以上变量请根据服务端配置自行调整
 ## 5.重启容器
 重启容器，连接宿主机映射端口享受kcp带给你的快速网络。
