@@ -2,8 +2,8 @@ FROM golang:alpine
 MAINTAINER lunksana <zoufeng4@gmail.com>
 RUN apk update && \
     apk upgrade && \
-    apk add git && \
-    apk add wget
+    apk add wget && \
+    rm /var/cache/apk/*
 VOLUME /root
 
 RUN wget https://github.com/xtaci/kcptun/releases/download/v20161118/kcptun-linux-amd64-20161118.tar.gz && \
