@@ -1,0 +1,12 @@
+FROM golang:alpine
+MAINTAINER lunksana <zoufeng4@gmail.com>
+RUN apk update && \
+    apk upgrade && \
+    rm /var/cache/apk/*
+
+ENV KCP_TARGET=127.0.0.1:29900
+    KCP_KEY="it's a sectect"
+    KCP_CRYPT=salsa20
+    KCP_MODE=fast2
+    KCP_NOCOMP=true
+    
