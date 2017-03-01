@@ -2,7 +2,7 @@
 ## 1.介绍
 这是一个基于官方kcptun构建的客户端容器镜像。
 ## 2.版本
-当前KCPTUN版本：v20161222
+当前KCPTUN版本：v20170221
 ## 3.版权说明
 kcptun执行程序抓取于[xtaci/kcptun](https://github.com/xtaci/kcptun)
 # 使用方法
