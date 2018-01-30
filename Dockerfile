@@ -1,5 +1,5 @@
 FROM golang:alpine
-MAINTAINER lunksana <zoufeng4@gmail.com>
+LABEL maintatner="lunksana <zoufeng4@gmail.com>"
 RUN apk update && \
     apk upgrade && \
     apk add wget && \

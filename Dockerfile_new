@@ -1,12 +1,19 @@
-FROM golang:alpine
-MAINTAINER lunksana <zoufeng4@gmail.com>
+FROM alpine:latest
+LABEL maintainer="lunksana <zoufeng4@gmail.com>"
 RUN apk update && \
     apk upgrade && \
+    apk add wget && \
     rm /var/cache/apk/*
 
-ENV KCP_TARGET=127.0.0.1:29900
-    KCP_KEY="it's a sectect"
-    KCP_CRYPT=salsa20
-    KCP_MODE=fast2
-    KCP_NOCOMP=true
-    
+ENV KCP_LISTEN=":29900"
+ENV KCP_TARGET="127.0.0.1:29900"
+ENV KCP_KEY="it's a sectect"
+ENV KCP_CRYPT="salsa20"
+ENV KCP_MODE="fast2"
+ENV KCP_MTU=1350
+ENV KCP_SNDWND=1024
+ENV KCP_NOCOMP="true"
+ENV KCP_RCVWND=1024
+ENV KCP_DATASHARD=10
+ENV KCP_PARITYSHARD=3
+ENV KCP_DSCP=0  
