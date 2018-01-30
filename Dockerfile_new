@@ -3,7 +3,8 @@ LABEL maintainer="lunksana <zoufeng4@gmail.com>"
 RUN apk update && \
     apk upgrade && \
     apk add wget && \
-    rm /var/cache/apk/*
+    rm /var/cache/apk/* && \
+    kcp_new_ver=$(wget -qO- "https://github.com/xtaci/kcptun/tags"| grep "/xtaci/kcptun/releases/tag/"| head -n 1| awk -F "/tag/v" '{print $2}'| sed 's/\">//')
 
 ENV KCP_LISTEN=":29900"
 ENV KCP_TARGET="127.0.0.1:29900"
