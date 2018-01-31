@@ -16,7 +16,7 @@ docker run --name mykcptun-client -v /path/json:/root -p 1083:12948 -d lunksana/
 ## 3.修改配置文件
 容器首次运行后会自动在挂载的目录下生成一个client.json文件，请根据kcptun服务端的配置自行调整（请不要修改监听端口12948）
 ## 4.变量说明
-```
+
 |      变量名      |      默认值      |      说明      |
 |-----------------|------------------|---------------|
 |localaddr        |:12948            |监听端口        |
@@ -40,7 +40,7 @@ docker run --name mykcptun-client -v /path/json:/root -p 1083:12948 -d lunksana/
 |nc               |1                 |                |
 |sockbuf          |4194304           |                |
 |keepalive        |10                |                |
-```
+
 以上变量请根据服务端配置自行调整
 ## 5.重启容器
 重启容器，连接宿主机映射端口享受kcp带给你的快速网络。
