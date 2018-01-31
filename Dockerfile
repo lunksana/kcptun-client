@@ -6,7 +6,7 @@ RUN apk update && \
     rm /var/cache/apk/*
 VOLUME /root
 
-RUN wget https://github.com/xtaci/kcptun/releases/download/v20170221/kcptun-linux-amd64-20170221.tar.gz && \
+RUN wget https://github.com/xtaci/kcptun/releases/download/v20171201/kcptun-linux-amd64-20171201.tar.gz && \
     tar xzf kcptun-linux-amd64-20171201.tar.gz && \
     rm kcptun-linux-amd64-20171201.tar.gz server_linux_amd64 && \
     mv client_linux_amd64 client 
