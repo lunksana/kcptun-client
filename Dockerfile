@@ -6,9 +6,9 @@ RUN apk update && \
     rm /var/cache/apk/*
 VOLUME /root
 
-RUN wget https://github.com/xtaci/kcptun/releases/download/v20171201/kcptun-linux-amd64-20171201.tar.gz && \
-    tar xzf kcptun-linux-amd64-20171201.tar.gz && \
-    rm kcptun-linux-amd64-20171201.tar.gz server_linux_amd64 && \
+RUN wget https://github.com/xtaci/kcptun/releases/download/v20180316/kcptun-linux-amd64-20180316.tar.gz && \
+    tar xzf kcptun-linux-amd64-20180316.tar.gz && \
+    rm kcptun-linux-amd64-20180316.tar.gz server_linux_amd64 && \
     mv client_linux_amd64 client && \
     apk del wget 
 #RUN go get github.com/xtaci/kcptun/client
@@ -18,4 +18,3 @@ RUN chmod +x /start.sh
 EXPOSE 12948
 CMD set -xe &&\  
     /start.sh
-
